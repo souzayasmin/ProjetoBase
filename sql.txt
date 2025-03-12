@@ -1,0 +1,78 @@
+
+create database banco_salas; 
+
+use banco_salas;
+
+CREATE TABLE usuario (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    cpf CHAR(14) NOT NULL,
+    senha VARCHAR(30) NOT NULL
+);
+
+-- Povoando a tabela usuarios
+INSERT INTO usuario (nome, email, cpf, senha) VALUES 
+('Clara Pereira', 'Clara@example.com', '45052242875', 'senha123'),
+('Maria Mendes', 'Maria@example.com', '44676553870', 'senha123'),
+('Yasmin Souza', 'Yasmin@example.com', '44657655841', 'senha123');
+
+-- Criando tabela sala
+CREATE TABLE sala (
+    id_sala INT PRIMARY KEY AUTO_INCREMENT,
+    classificacao VARCHAR(100) UNIQUE NOT NULL,
+    horarios_disponiveis VARCHAR(255) NOT NULL,
+    bloco VARCHAR(30) NOT NULL
+);
+
+-- Povoando a tabela sala
+INSERT INTO sala (classificacao, horarios_disponiveis, bloco) VALUES 
+('Alta Mogiana Almoxarife', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('Alta Mogiana Automotiva', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('Alta Mogiana Desenvolvimento de Sistema', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('Alta Mogiana Eletroeletrônica', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('Alta Mogiana Manutenção', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('A1 - CONVERSORES', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('A2 - ELETRÔNICA', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('A3 - CLP', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('A4 - AUTOMAÇÃO', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('A5 - METROLOGIA', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('A6 - PNEUMÁTICA/HIDRÁULICA', 'Segunda a sexta-feira, das 8h às 17h', 'A'),
+('B2 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B3 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B5 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B6 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B7 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B8 - LAB. INFORMÁTICA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B9 - LAB. INFORMÁTICA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B10 - LAB. INFORMÁTICA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B11 - LAB. INFORMÁTICA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('B12 - LAB. INFORMÁTICA', 'Segunda a sexta-feira, das 8h às 17h', 'B'),
+('Colorado A1', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('Colorado Oficina', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('C1 - SALA DE AULA (ALP)', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('C2 - LAB. DE INFORMÁTICA', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('C3 - SALA DE MODELAGEM VESTUÁRIO', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('C4 - SALA DE MODELAGEM VESTUÁRIO', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('C5 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'C'),
+('D1 - SALA MODELAGEM', 'Segunda a sexta-feira, das 8h às 17h', 'D'),
+('D2 - SALA DE MODELAGEM', 'Segunda a sexta-feira, das 8h às 17h', 'D'),
+('D3 - SALA DE AULA', 'Segunda a sexta-feira, das 8h às 17h', 'D'),
+('D4 - SALA DE CRIAÇÃO', 'Segunda a sexta-feira, das 8h às 17h', 'D'),
+('LAB. ALIMENTOS', 'Segunda a sexta-feira, das 8h às 17h', 'Lab'),
+('OFICINA DE AJUSTAGEM/FRESAGEM', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina'),
+('OFICINA - COMANDOS ELÉTRICOS', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina'),
+('OFICINA DE TORNEARIA', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina'),
+('OFICINA DE SOLDAGEM', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina'),
+('OFICINA DE CNC', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina');
+
+CREATE TABLE reserva (
+  id int(11) NOT NULL,
+  data_inicio date NOT NULL,
+  data_fim date NOT NULL,
+  dias varchar(255) NOT NULL,
+  usuario char(11) NOT NULL,
+  sala char(5) NOT NULL,
+  hora_inicio time NOT NULL,
+  hora_fim time NOT NULL
+);
