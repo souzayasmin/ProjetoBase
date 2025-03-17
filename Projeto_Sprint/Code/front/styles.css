@@ -1,0 +1,458 @@
+/* Seletor Universal - aplica estilos padrão a todos os elementos da página */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui bordas e padding no cálculo da largura e altura dos elementos */
+}
+
+/* Estiliza o corpo principal da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão como Arial com fallback para sans-serif */
+  background-color: #d9d9d9a9; /* Define a cor de fundo do body em vermelho */
+  color: #333; /* Define a cor do texto */
+  min-height: 100vh; /* Define altura mínima de 100% da viewport */
+  position: relative; /* Posiciona o body para o rodapé absoluto */
+  padding-bottom: 100px; /* Cria espaço para o rodapé na parte inferior da página */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  margin: 0px; /* Remove a margem */
+  background-color: #d90000; /* Define cor de fundo cinza claro */
+  padding: 25px;
+}
+
+/* Estilos para o botão de login na home */
+.botao-loginHome {
+  position: absolute; /* Posiciona o botão de forma absoluta */
+  right: 30px; /* Posiciona o botão à direita */
+  top: 7px; /* Define a distância do topo */
+  background-color: red; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+  border: none; /* Remove a borda */
+  padding: 10px 20px; /* Define o espaçamento interno */
+  font-size: 16px; /* Define o tamanho da fonte */
+  cursor: pointer; /* Mostra o cursor como uma mão ao passar sobre o botão */
+  border-radius: 5px; /* Arredonda os cantos */
+}
+
+/* Estilos para o botão de cadastro */
+.botao-cadastro {
+  position: absolute;
+  right: 150px;
+  top: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos principais para a área de conteúdo */
+main {
+  padding: 40px; /* Define padding ao redor do conteúdo */
+  text-align: center; /* Centraliza o texto */
+}
+
+main img {
+  max-width: 160px; /* Limita a largura máxima das imagens */
+  background-color: #c4c4c4;
+  padding: 10px;
+  border-radius: 0px;
+  padding-bottom: 10px;
+}
+
+/* Estilos para a seção de login */
+#login {
+  background-color: #c4c4c4;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  margin: 30px auto; /* Centraliza e define margem superior */
+}
+
+/* Estilos para a seção de cadastro */
+#cadastro {
+  background-color: #c4c4c4;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  margin: 10px auto;
+}
+
+/* Estilo do botão de login */
+.login-button {
+  background-color: #ff0000;
+  color: rgb(240, 240, 240);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo do botão de cadastro */
+.cadastro-button {
+  background-color: #ff0000;
+  color: rgb(240, 240, 240);
+  padding: 5px;
+  width: 50%; /* Define a largura do botão */
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para o link "esqueci minha senha" */
+.login-nsenha {
+  cursor: pointer; /* Define o cursor como uma mão */
+  text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* Estilos para a caixa de entrada de texto */
+.input-box {
+  width: 80%;
+  padding: 8px;
+  margin: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e1dfdf; /* Fundo cinza claro */
+}
+
+/* Estilo para os títulos de seção dentro do main */
+main section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilo do rodapé */
+footer {
+  background-color: #d90000;
+  text-align: center;
+  padding: 15px;
+  width: 100%; /* Define o rodapé para ocupar toda a largura */
+  position: absolute; /* Posiciona de forma absoluta */
+  bottom: 0; /* Fixa na parte inferior da página */
+}
+
+/* --------------------------- Pagina inicial ---------------------------- */
+
+.header-senai {
+  display: flex;
+  flex-grow: 1;
+  width: 150px;
+  height: auto;
+  padding: auto;
+  border: 100px;
+  margin-top: 20px;
+}
+
+.header-inicial {
+  background-color: #d9d9d9;
+  position: relative;
+}
+
+.footer-inicial {
+  background-color: #d90000;
+}
+
+.body-inicial {
+  background-color: #f5f5f5;
+}
+
+.botao-perfil {
+  display: flex;
+  background-color: #ebebeb;
+  justify-content: center; /* Alinha o conteúdo (texto ou ícone) no centro */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  width: 95px;
+  height: 30px; /* Ajuste o tamanho do botão */
+  position: absolute;
+  top: 65%; /* Coloca o botão no meio da altura disponível */
+  right: 20px; /* Posiciona o botão a 10px da borda direita da tela */
+  margin-top: -15px; /* Ajusta a posição para centralizar o botão verticalmente */
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.imagem-botao-perfil {
+  width: 30px;
+  height: 30px;
+}
+
+.header-vermelho {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 30px; /* Altura da barra vermelha */
+  background-color: #d90000; /* Cor da barra */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sair-inicio {
+  color: aliceblue;
+  top: 15%;
+  margin-right: 20px;
+  margin-top: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#Div_risco {
+  width: 100vw;
+  height: 2px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+#Div_risco02 {
+  width: 80%;
+  height: 100%;
+  background-color: #d90000;
+}
+
+.botao-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b3b3b3b7;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  width: 200px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.imagem-botao {
+  width: 100px;
+  height: 100px;
+}
+
+.botaos-inicial {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-top: 80px;
+}
+
+/* ---------------------Salas--------------------------- */
+
+.texto-sala {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%; /* Largura total da tabela */
+  border-collapse: collapse; /* Remove espaços entre bordas */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+th,
+td {
+  border: 1px solid #ddd; /* Borda cinza clara */
+  padding: 8px; /* Espaçamento interno */
+  text-align: left; /* Alinhamento à esquerda */
+}
+
+th {
+  background-color: #d90000; /* Cor de fundo para cabeçalho */
+  color: white; /* Cor do texto no cabeçalho */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cor de fundo para linhas pares */
+}
+
+tr:hover {
+  background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}
+
+/* -------------------------Blocos------------------------------ */
+.bloco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b3b3b3b7;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.blocos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barra-vermelha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d90000;
+  width: 180px;
+  height: 30px;
+  border-radius: 10px;
+  color: #f2f2f2;
+  position: absolute;
+  top: 270px;
+}
+
+.letra-bloco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  top: 313px;
+  color: black;
+  font-size: 40px;
+}
+
+.barra-vermelha2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d90000;
+  width: 180px;
+  height: 30px;
+  border-radius: 10px;
+  color: #f2f2f2;
+  position: absolute;
+  top: 500px;
+}
+
+.letra-bloco2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  top: 540px;
+  color: black;
+  font-size: 40px;
+}
+
+.texto-bloco {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ---------------------------Modal----------------------*/
+
+#open-modal {
+  display: flex;
+  margin-left: 50%;
+  padding: 15px 10px;
+  background-color: #d90000;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-modal {
+  padding: 15px 10px;
+  background-color: #058610;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fade,
+#modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #c2c2c2;
+  width: 500px;
+  max-width: 90%;
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aca9a9;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide{
+  top: 0;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-body input{
+  background-color: #e1dfdf;
+  border-radius: 7px;
+  border: none;
+  padding: 8px;
+  margin: 8px;
+}
+
+.modal-body label{
+  margin: 8px;
+}
+
+

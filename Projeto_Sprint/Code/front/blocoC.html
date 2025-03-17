@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloco C</title>
+    <!--Incluindo o arquivo de estilização-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="body-inicial">
+    <!--Tag semântica de cabeçalho-->
+    <header class="header-inicial">
+      <img class="header-senai" src="senaisplogo.png" alt="Logo SENAI SP" />
+      <div class="header-vermelho">
+        <div class="sair-inicio">
+          <a href="login.html" class="sair-inicio">Sair</a>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="botao-perfil"
+        onclick="window.location.href='blocos.html'"
+      >
+        <img src="seta_voltar.png" alt="img" class="imagem-botao-perfil" />
+        Voltar
+      </button>
+    </header>
+    <div id="Div_risco">
+      <div id="Div_risco02"></div>
+    </div>
+    <h1 class="texto-sala">Bloco C</h1>
+
+    <main>
+      <section>
+        <table id="sala-table">
+          <thead>
+            <th>Horários</th>
+            <th>Classificação</th>
+            <th>Bloco</th>
+          </thead>
+
+          <tbody id="sala-list-tabela">
+            <!-- As Salas vai ser adicionada aqui -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <button id="open-modal">Reservar</button>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+      <div class="modal-header">
+        <h3>Preencha os campos da sua reserva</h3>
+        <button id="close-modal">Confirmar</button>
+      </div>
+      <div class="modal-body">
+        <label for="classification">Classificação:</label>
+        <input type="text" id="classification" placeholder="Classificação" />
+
+        <label for="start">Início:</label>
+        <input type="text" id="start" placeholder="Início" />
+
+        <label for="end">Término:</label>
+        <input type="text" id="end" placeholder="Término" />
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" min="2024-01-01" max="2024-12-31" />
+      </div>
+    </div>
+
+    <footer class="footer-inicial">
+      <p>&copy;Desenvolvido por:Yasmin,Mateus e Arthur</p>
+    </footer>
+    <script src="appSala.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

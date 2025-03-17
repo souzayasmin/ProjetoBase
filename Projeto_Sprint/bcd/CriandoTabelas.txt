@@ -1,0 +1,31 @@
+\connect alunods@10.89.240.86:3306
+senai@604
+
+create database agenda; 
+use agenda;
+
+CREATE TABLE usuario (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    telefone CHAR(14) NOT NULL,
+    senha VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE sala (
+    id_sala INT PRIMARY KEY AUTO_INCREMENT,
+    classificacao VARCHAR(100) UNIQUE NOT NULL,
+    horarios_disponiveis VARCHAR(255) NOT NULL,
+    bloco VARCHAR(30) NOT NULL
+);
+
+
+create table reserva(
+     id_reserva int primary key auto_increment,
+     fk_id_usuario int not null,
+     fk_id_sala int not null,
+     datahora_inicio datetime not null, 
+     datahora_fim datetime not null,
+     foreign key (fk_id_sala) references sala(id_sala),
+     foreign key (fk_id_usuario) references usuario(id_usuario)
+);

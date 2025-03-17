@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="PT-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocos</title>
+    <!--Incluindo o arquivo de estilização-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="body-inicial">
+    <!--Tag semântica de cabeçalho-->
+    <header class="header-inicial">
+      <img class="header-senai" src="senaisplogo.png" alt="Logo SENAI SP" />
+      <div class="header-vermelho">
+        <div class="sair-inicio">
+          <a href="login.html" class="sair-inicio">Sair</a>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="botao-perfil"
+        onclick="window.location.href='inicial.html'"
+      >
+        <img src="seta_voltar.png" alt="img" class="imagem-botao-perfil" />
+        Voltar
+      </button>
+    </header>
+    <div id="Div_risco">
+      <div id="Div_risco02"></div>
+    </div>
+    <h1 class="texto-bloco">Blocos</h1>
+
+    <main>
+      <section class="blocos">
+        <button
+          class="bloco"
+          type="button"
+          class="botao-inicio"
+          onclick="window.location.href='blocoA.html'"
+        >
+          <div class="barra-vermelha">Bloco</div>
+          <div class="letra-bloco">A</div>
+        </button>
+
+        <button
+          class="bloco"
+          type="button"
+          class="botao-inicio"
+          onclick="window.location.href='blocoB.html'"
+        >
+          <div class="barra-vermelha">Bloco</div>
+          <div class="letra-bloco">B</div>
+        </button>
+
+        <button
+          class="bloco"
+          type="button"
+          class="botao-inicio"
+          onclick="window.location.href='blocoC.html'"
+        >
+          <div class="barra-vermelha2">Bloco</div>
+          <div class="letra-bloco2">C</div>
+        </button>
+
+        <button
+          class="bloco"
+          type="button"
+          class="botao-inicio"
+          onclick="window.location.href='blocoD.html'"
+        >
+          <div class="barra-vermelha2">Bloco</div>
+          <div class="letra-bloco2">D</div>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer-inicial">
+      <p>&copy;Desenvolvido por:Yasmin,Mateus e Arthur</p>
+    </footer>
+  </body>
+</html>
