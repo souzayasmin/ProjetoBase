@@ -66,13 +66,12 @@ INSERT INTO sala (classificacao, horarios_disponiveis, bloco) VALUES
 ('OFICINA DE SOLDAGEM', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina'),
 ('OFICINA DE CNC', 'Segunda a sexta-feira, das 8h às 17h', 'Oficina');
 
-CREATE TABLE reserva (
-  id int(11) NOT NULL,
-  data_inicio date NOT NULL,
-  data_fim date NOT NULL,
-  dias varchar(255) NOT NULL,
-  usuario char(11) NOT NULL,
-  sala char(5) NOT NULL,
-  hora_inicio time NOT NULL,
-  hora_fim time NOT NULL
+create table reserva(
+     id_reserva int primary key auto_increment,
+     fk_id_usuario int not null,
+     fk_id_sala int not null,
+     datahora_inicio datetime not null, 
+     datahora_fim datetime not null,
+     foreign key (fk_id_sala) references sala(id_sala),
+     foreign key (fk_id_usuario) references usuario(id_usuario)
 );
